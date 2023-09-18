@@ -6,7 +6,8 @@ function App() {
   const [num,setNum] = React.useState("");
   const [screen,setScreen] = React.useState("");
   const [oper,setOper] = React.useState([0]);
-  const keys=["7","8","9","DEL","4","5","6","+","1","2","3","-",".","0","/","x","RESET","="];
+  const keys=[{val:"7",col:"#EAE3DB"},{val:"8",col:"#EAE3DB"},{val:"9",col:"#EAE3DB"},{val:"DEL",col:"#A2B3E1"},{val:"4",col:"#EAE3DB"},{val:"5",col:"#EAE3DB"},{val:"6",col:"#EAE3DB"},{val:"+",col:"#EAE3DB"},{val:"1",col:"#EAE3DB"},{val:"2",col:"#EAE3DB"},{val:"3",col:"#EAE3DB"},{val:"-",col:"#EAE3DB"},{val:".",col:"#EAE3DB"},{val:"0",col:"#EAE3DB"},{val:"/",col:"#EAE3DB"},{val:"x",col:"#EAE3DB"},{val:"RESET",col:"#A2B3E1"},{val:"=",col:"#F96C5B"}];
+  //const keys=["7","8","9","DEL","4","5","6","+","1","2","3","-",".","0","/","x","RESET","="];
   function calculator(str){
     let action="";
     let len = oper.length;
@@ -94,13 +95,13 @@ function App() {
     <main id="backdrop" className='App overflow-y-scroll flex justify-center items-center w-screen h-screen text-white bg-[#3a4764] text-2xl'>
       <div className='main w-[350px] h-full sm:w-[450px]'>
         <HeadCalc />
-        <section id="screen" className='screen rounded-xl tracking-widest barlow roundec-xl my-4 px-4 flex justify-end items-center h-[75px] text-3xl font-semibold bg-[#182034]'>
+        <section id="screen" className='screen rounded-xl tracking-wider sparta roundec-xl my-3 px-4 flex justify-end items-center h-[75px] text-3xl font-semibold bg-[#182034]'>
           {screen}
         </section>
-        <section id="keypad" className='keys belle flex flex-wrap py-1 justify-center bg-[#232c43] rounded-xl'>
+        <section id="keypad" className='keys sparta flex flex-wrap py-2 justify-center bg-[#232c43] rounded-xl'>
           {keys.map((each)=>{
-            return (each==="RESET" || each==="=") ? (<Buttons key={each} click={buttonClick} val={each} wid={true} />) :
-            (<Buttons key={each} click={buttonClick} val={each} wid={false} />)
+            return (each.val==="RESET" || each.val==="=") ? (<Buttons key={each.val} color={each.col} click={buttonClick} val={each.val} wid={true} />) :
+            (<Buttons color={each.col} key={each.val} click={buttonClick} val={each.val} wid={false} />)
           })}
         </section>
       </div>

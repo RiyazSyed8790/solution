@@ -1,12 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;1,100&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;1,100&family=Bellefair&family=League+Spartan:wght@400;600&display=swap');
 @layer utilities{
   .barlow{
     font-family: 'Barlow Condensed', sans-serif;
   }
-  
+  .sparta{
+    font-family: 'League Spartan', sans-serif;
+  }
   .belle{
     font-family: 'Bellefair', serif;
   }

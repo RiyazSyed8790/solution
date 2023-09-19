@@ -94,7 +94,7 @@ function App() {
     }
   }
   function loader(e){
-    console.log(e," is active?");
+    // console.log(e," is active?");
     switch(e){
       case 1:
         setKeys((prev)=>{

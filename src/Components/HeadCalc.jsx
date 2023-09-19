@@ -44,7 +44,8 @@ export default function HeadCalc(props){
         break;
       
       case 3:
-        document.getElementById("backdrop").classList.add("bg-[#17062A]","text-[#FAE036]");
+        document.getElementById("backdrop").classList.add("bg-[#17062A]");
+        document.getElementById("backdrop").classList.add("text-[#FAE036]");
         document.getElementById("keypad").classList.add("bg-[#1E0836]");
         document.getElementById("slider").classList.add("bg-[#1E0836]");
         document.getElementById("screen").classList.add("bg-[#1E0836]");

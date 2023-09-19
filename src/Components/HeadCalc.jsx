@@ -1,5 +1,6 @@
+import { getElementError } from "@testing-library/react";
 import React from "react";
-export default function HeadCalc(){
+export default function HeadCalc(props){
     const [act,setAct] = React.useState(1);  
   let inLineStyle = {
     visibility:"visible"
@@ -17,22 +18,57 @@ export default function HeadCalc(){
         document.getElementById("keypad").classList.remove("bg-[#D3CDCD]");
         document.getElementById("slider").classList.remove("bg-[#D3CDCD]");
         document.getElementById("screen").classList.remove("bg-[#EEEEEE]");
+        //rem case 3
+        document.getElementById("backdrop").classList.remove("bg-[#17062A]","text-[#FAE036]");
+        document.getElementById("keypad").classList.remove("bg-[#1E0836]");
+        document.getElementById("slider").classList.remove("bg-[#1E0836]");
+        document.getElementById("screen").classList.remove("bg-[#1E0836]");
         break;
+        
       
       case 2:
         document.getElementById("backdrop").classList.add("bg-[#E6E6E6]","text-[#3F3F35]");
         document.getElementById("keypad").classList.add("bg-[#D3CDCD]");
         document.getElementById("slider").classList.add("bg-[#D3CDCD]");
         document.getElementById("screen").classList.add("bg-[#EEEEEE]");
+        //rem case 1
+        document.getElementById("backdrop").classList.remove("bg-[#3a4764]","text-white");
+        document.getElementById("keypad").classList.remove("bg-[#232c43]");
+        document.getElementById("slider").classList.remove("bg-[#252D44]");
+        document.getElementById("screen").classList.remove("bg-[#182034]");
+        //rem case 3
+        document.getElementById("backdrop").classList.remove("bg-[#17062A]","text-[#FAE036]");
+        document.getElementById("keypad").classList.remove("bg-[#1E0836]");
+        document.getElementById("slider").classList.remove("bg-[#1E0836]");
+        document.getElementById("screen").classList.remove("bg-[#1E0836]");
         break;
       
+      case 3:
+        document.getElementById("backdrop").classList.add("bg-[#17062A]","text-[#FAE036]");
+        document.getElementById("keypad").classList.add("bg-[#1E0836]");
+        document.getElementById("slider").classList.add("bg-[#1E0836]");
+        document.getElementById("screen").classList.add("bg-[#1E0836]");
+        //rem case 1
+        document.getElementById("backdrop").classList.remove("bg-[#3a4764]","text-white");
+        document.getElementById("keypad").classList.remove("bg-[#232c43]");
+        document.getElementById("slider").classList.remove("bg-[#252D44]");
+        document.getElementById("screen").classList.remove("bg-[#182034]");
+        //rem case 2
+        document.getElementById("backdrop").classList.remove("bg-[#E6E6E6]","text-[#3F3F35]");
+        document.getElementById("keypad").classList.remove("bg-[#D3CDCD]");
+        document.getElementById("slider").classList.remove("bg-[#D3CDCD]");
+        document.getElementById("screen").classList.remove("bg-[#EEEEEE]");
+        break;
       default:
-        console.log("Run bitch run!!");
+        console.log("ntng to run");
         break;  
     }
   }
+  React.useEffect(function(){
+   props.load(act);
+  },[act]);
     return(
-        <section className='head flex justify-between items-end'>
+        <section  className='head flex justify-between items-end'>
         <h2 className='text-3xl font-semibold barlow tracking-wider '>calc</h2>
         <div className='flex items-end'>
           <h2 className='text-2xl barlow mx-4'>THEME</h2>

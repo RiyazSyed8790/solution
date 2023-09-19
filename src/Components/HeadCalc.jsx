@@ -1,4 +1,3 @@
-import { getElementError } from "@testing-library/react";
 import React from "react";
 export default function HeadCalc(props){
     const [act,setAct] = React.useState(1);  
@@ -80,9 +79,9 @@ export default function HeadCalc(props){
               <span>3</span>
             </div>
             <div id="slider" className='dots flex items-center w-full child:mx-1 child:my-1 bg-[#252D44] rounded-xl'>
-              <button onClick={()=>show(1)} style={(act===1)?inLineStyle:{backgroundColor:"transparent"}} className=' w-4 h-4 rounded-xl bg-[#d03f2f]'></button>
-              <button onClick={()=>show(2)} style={(act===2)?inLineStyle:{backgroundColor:"transparent"}} className=' w-4 h-4 rounded-xl bg-[#F78E39]'></button>
-              <button onClick={()=>show(3)} style={(act===3)?inLineStyle:{backgroundColor:"transparent"}} className=' w-4 h-4 rounded-xl bg-[#00e0d1]'></button>
+              <button onClick={()=>show(1)} style={(act===1)?inLineStyle:{backgroundColor:"transparent"}} aria-label="Theme-1" className=' w-4 h-4 rounded-xl bg-[#d03f2f]'></button>
+              <button onClick={()=>show(2)} style={(act===2)?inLineStyle:{backgroundColor:"transparent"}} aria-label="Theme-2" className=' w-4 h-4 rounded-xl bg-[#F78E39]'></button>
+              <button onClick={()=>show(3)} style={(act===3)?inLineStyle:{backgroundColor:"transparent"}} aria-label="Theme-3" className=' w-4 h-4 rounded-xl bg-[#00e0d1]'></button>
             </div>
           </div>
 

@@ -187,7 +187,7 @@ function App() {
   }
   return (
     <main id="backdrop" className='App overflow-y-scroll flex justify-center items-center w-screen h-screen text-white bg-[#3a4764] text-2xl'>
-      <div className='main w-[350px] h-full sm:w-[450px]'>
+      <div className='main w-[350px] md:h-full sm:w-[450px]'>
         <HeadCalc load={loader} />
         <section id="screen" className='screen rounded-xl tracking-wider sparta roundec-xl my-3 px-4 flex justify-end items-center h-[75px] text-3xl font-semibold bg-[#182034]'>
           {screen}
